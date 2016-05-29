@@ -4,11 +4,11 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Crazezy2333 : Crazezy2333.GitHub.io">
+    <meta name="description" content="疯癫居士 : Crazezy2333.GitHub.io">
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <title>Crazezy2333</title>
+    <title>疯癫居士</title>
   </head>
 
   <body>
@@ -18,7 +18,7 @@
         <header class="inner">
           <a id="forkme_banner" href="https://github.com/crazezy2333">View on GitHub</a>
 
-          <h1 id="project_title">Crazezy2333</h1>
+          <h1 id="project_title">疯癫居士</h1>
           <h2 id="project_tagline">Crazezy2333.GitHub.io</h2>
 
         </header>
@@ -27,30 +27,74 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h3>
-<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+        <h2>
+<a id="php-中的字符串" class="anchor" href="#php-%E4%B8%AD%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>PHP 中的字符串</h2>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here <a href="https://guides.github.com/features/mastering-markdown/">using GitHub Flavored Markdown</a>, select a template crafted by a designer, and publish. After your page is generated, you can check out the new <code>gh-pages</code> branch locally. If you’re using GitHub Desktop, simply sync your repository and you’ll see the new branch.</p>
+<hr>
 
-<h3>
-<a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We’ve crafted some handsome templates for you to use. Go ahead and click 'Continue to layouts' to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved.</p>
-
-<h3>
-<a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Creating pages manually</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://help.github.com/articles/basic-writing-and-formatting-syntax/#mentioning-users-and-teams" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor’s GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out our <a href="https://help.github.com/pages">documentation</a> or <a href="https://github.com/contact">contact support</a> and we’ll help you sort it out.</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-c1">1.</span> 字符串的处理介绍
+        在C语言中字符串是作为字节数组处理的。在Java语言中字符串是作为对象处理的。而php则把字符串作为基本数据类型来处理。
+        通常对字符串的处理涉及字符串的格式化。字符串的分割和连接、字符串的比较、以及字符串的查找、匹配和替换。
+<span class="pl-c1">2.</span> 常用的字符串输出函数
+        <span class="pl-c1">2.1</span> 常用的输出字符串函数：
+            <span class="pl-en">echo</span>( )   <span class="pl-k">--</span> 输出字符串
+            <span class="pl-en">print</span>( )  <span class="pl-k">--</span> 输出一个字符串
+            <span class="pl-en">die</span>( )    <span class="pl-k">--</span> 输出一条消息，并退出当前脚本
+            <span class="pl-en">printf</span>( ) <span class="pl-k">--</span> 输出格式化字符串
+            <span class="pl-en">sprintf</span>( )<span class="pl-k">--</span> 把格式化的字符串写入一个变量中
+        <span class="pl-c1">2.2</span> printf与sprintf都是格式化字串：
+            字符串转换格式：
+                <span class="pl-k">%%</span>  返回百分比符号
+                <span class="pl-k">%</span>b  二进制数
+                <span class="pl-k">%</span>c  依照<span class="pl-c1">ASCII</span>值的字符
+                <span class="pl-k">%</span>d  带符号十进制数
+                <span class="pl-k">%</span>e      可续计数法（如<span class="pl-c1">1.5e3</span>）
+                <span class="pl-k">%</span>u  无符号十进制数
+                <span class="pl-k">%</span>f或<span class="pl-k">%</span>F     浮点数
+                <span class="pl-k">%</span>o  八进制数
+                <span class="pl-k">%</span>s  字符串
+                <span class="pl-k">%</span>x或<span class="pl-k">%</span>X  十六进制数
+<span class="pl-c1">3.</span> 常用的字符串格式化函数
+    <span class="pl-c1">3.1</span> 去除空格和字符串填充补函数
+        <span class="pl-en">ltrim</span>()
+        <span class="pl-en">rtrim</span>()
+        <span class="pl-en">trim</span>()
+        <span class="pl-en">str_pad</span>()
+    <span class="pl-c1">3.2</span> 字符串大小写的转换
+        <span class="pl-en">strtolower</span>()
+        <span class="pl-en">strtoupper</span>()
+        <span class="pl-en">ucfirst</span>()
+        <span class="pl-en">ucwords</span>()
+    <span class="pl-c1">3.3</span> 和<span class="pl-c1">HTML</span>标签相关联的字符串格式化
+        nl2br
+        <span class="pl-en">htmlspecialchars</span>()
+        <span class="pl-en">htmlentities</span>()
+        <span class="pl-en">strip_tags</span>()
+    <span class="pl-c1">3.4</span> 其他字符串格式化函数
+        <span class="pl-en">strrev</span>()
+        <span class="pl-en">strlen</span>()
+        <span class="pl-en">number_format</span>()
+        <span class="pl-en">md5</span>()
+<span class="pl-c1">4</span> 字符串操作函数
+    <span class="pl-c1">4.1</span> 字符串比较函数
+         <span class="pl-en">strcmp</span>()
+         <span class="pl-en">strncmp</span>()
+         <span class="pl-en">strcasecmp</span>()
+         <span class="pl-en">strnatcmp</span>()
+         <span class="pl-en">similar_text</span>()
+    <span class="pl-c1">4.2</span> 字符串分割与拼装
+        <span class="pl-en">explode</span>()
+        <span class="pl-en">implode</span>()
+        <span class="pl-en">join</span>()
+    <span class="pl-c1">4.3</span> 字符串截取
+        <span class="pl-en">substr</span>()
+    <span class="pl-c1">4.4</span> 字符串查找
+        <span class="pl-en">strstr</span>() <span class="pl-en">strchr</span>()
+        <span class="pl-en">strrchr</span>()
+        <span class="pl-en">strpos</span>()
+        <span class="pl-en">strrpos</span>()
+    <span class="pl-c1">4.5</span> 字符串替换
+        <span class="pl-en">str_replace</span>()</pre></div>
       </section>
     </div>
 
